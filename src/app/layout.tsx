@@ -10,8 +10,6 @@ export const metadata: Metadata = {
     "Boutique matchmaking agency helping professionals build meaningful, lasting relationships. Because love deserves more than an algorithm.",
   icons: {
     icon: "/favicon.png",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "Mocha Date – Curated Matchmaking",

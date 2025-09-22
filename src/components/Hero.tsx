@@ -3,13 +3,16 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart } from "lucide-react";
-import heroImage from "@/../public/hero-image.jpg"; // ✅ move image into /public
+import heroImage from "@/../public/hero-image.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
+    <section
+      className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden"
+      aria-label="Hero"
+    >
+      {/* Background image with gradient overlay */}
+      <div className="absolute inset-0 -z-10">
         <Image
           src={heroImage}
           alt="Romantic couple enjoying coffee together"
@@ -17,59 +20,61 @@ const Hero = () => {
           priority
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <div className="fade-in-up">
+      <div className="relative z-10 w-full max-w-4xl px-6 sm:px-8 text-center">
+        <div className="mx-auto max-w-3xl">
           <div className="flex justify-center mb-6">
-            <Heart className="h-8 w-8 text-accent animate-pulse" />
+            <Heart className="h-9 w-9 text-accent animate-pulse drop-shadow-md" />
           </div>
 
-          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="font-heading text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-8 leading-tight text-white drop-shadow-lg">
             Because Love Deserves More Than an Algorithm
           </h1>
 
-          <p className="font-body text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-body text-lg sm:text-xl md:text-2xl text-white/90 mb-10 leading-relaxed max-w-2xl mx-auto">
             Curated matches, meaningful connections, and relationship guidance
-            for lasting love.
+            for lasting&nbsp;love.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            {/* Primary CTA */}
             <Button
               size="lg"
               variant="luxury"
               asChild
-              className="text-lg px-8 py-4 h-auto"
+              className="text-lg px-8 py-4 h-auto shadow-md hover:shadow-lg transition-all"
+              aria-label="Apply Now"
             >
               <a
                 href="https://forms.google.com/your-form-link"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2"
+                className="inline-flex items-center gap-2"
               >
                 Apply Now
                 <ArrowRight className="h-5 w-5" />
               </a>
             </Button>
 
-            <Button
-              size="lg"
-              variant="outline"
-              asChild
-              className="text-lg px-8 py-4 h-auto border-white text-white hover:bg-white hover:text-primary"
+            {/* Learn More CTA */}
+            <a
+              href="#learn-more"
+              className="inline-flex items-center gap-2 text-lg px-8 py-4 rounded-md border border-white/40 bg-white/10 text-white hover:bg-white hover:text-primary transition-all duration-200"
+              aria-label="Learn more about our services"
             >
-              <a href="#learn-more">Learn More</a>
-            </Button>
+              Learn More
+            </a>
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-          <div className="w-1 h-2 bg-white rounded-full mt-2 animate-bounce" />
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 opacity-80">
+        <div className="w-6 h-10 border-2 border-white/40 rounded-full flex items-start justify-center p-1">
+          <div className="w-1 h-2 bg-white rounded-full animate-bounce" />
         </div>
       </div>
     </section>

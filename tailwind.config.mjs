@@ -60,7 +60,8 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Luxury palette
+
+        /* Luxury palette */
         maroon: {
           DEFAULT: "hsl(var(--maroon))",
           light: "hsl(var(--maroon-light))",

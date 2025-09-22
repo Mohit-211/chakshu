@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -11,7 +12,6 @@ const Navigation = () => {
   const pathname = usePathname();
 
   const isActive = (path: string) => pathname === path;
-
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
@@ -20,9 +20,14 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="font-heading text-2xl font-semibold text-primary">
-              Mocha Date
-            </span>
+            <Image
+              src="/logo.png"
+              alt="Mocha Date"
+              width={160}
+              height={80}
+              className="h-auto w-24"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
