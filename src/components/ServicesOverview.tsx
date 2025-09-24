@@ -49,7 +49,7 @@ const ServicesOverview = () => {
             <span className="text-primary">Meaningful Connections</span>
           </h2>
           <p className="font-body text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            At Mocha Date, love is not about chance — it’s about{" "}
+            At Petal & Promise, love is not about chance — it’s about{" "}
             <span className="text-accent font-medium">curation, trust,</span>{" "}
             and the art of bringing two lives together with intention.
           </p>
@@ -100,7 +100,7 @@ const ServicesOverview = () => {
             moments with the right person.”
           </blockquote>
           <cite className="font-body text-muted-foreground text-base">
-            — The Mocha Date Philosophy
+            — The Petal & Promise Philosophy
           </cite>
         </div>
       </div>

@@ -22,7 +22,7 @@ const Navigation = () => {
           <Link href="/" className="flex items-center">
             <Image
               src="/logo.png"
-              alt="Mocha Date"
+              alt="Petal & Promise"
               width={160}
               height={80}
               className="h-auto w-24"

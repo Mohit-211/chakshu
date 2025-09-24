@@ -38,7 +38,7 @@ const reasons = [
 const testimonials = [
   {
     quote:
-      "After years of disappointing dating apps, Mocha Date helped me find my person. The personal touch and genuine care made all the difference.",
+      "After years of disappointing dating apps, Petal & Promise helped me find my person. The personal touch and genuine care made all the difference.",
     author: "Anubhav Singh",
     role: "Bangalore",
   },
@@ -50,7 +50,7 @@ const testimonials = [
   },
   {
     quote:
-      "Professional, discreet, and incredibly effective. Mocha Date understands what it means to find a true life partner.",
+      "Professional, discreet, and incredibly effective. Petal & Promise understands what it means to find a true life partner.",
     author: "Himanshi Kaushik",
     role: "Gurgaon",
   },
@@ -66,7 +66,7 @@ const WhyChooseUs = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-foreground mb-6">
-            Why Choose <span className="text-primary">Mocha Date</span>?
+            Why Choose <span className="text-primary">Petal & Promise</span>?
           </h2>
           <p className="font-body text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             More than matchmaking — we are your{" "}
@@ -118,7 +118,7 @@ const WhyChooseUs = () => {
             </h2>
             <p className="font-body text-lg text-muted-foreground">
               Real experiences from people who found their forever with{" "}
-              <span className="text-primary font-medium">Mocha Date</span>.
+              <span className="text-primary font-medium">Petal & Promise</span>.
             </p>
           </div>
 

@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3">
               <Image
                 src="/logo.png"
-                alt="Mocha Date"
+                alt="Petal & Promise"
                 width={180}
                 height={80}
                 className="h-auto w-24"
@@ -57,7 +57,7 @@ const Footer = () => {
           {/* Social Icons */}
           <div className="flex justify-center md:justify-end space-x-6">
             <a
-              href="https://linkedin.com/company/mochadate"
+              href="https://linkedin.com/company/Petal&Promise"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-smooth"
@@ -66,7 +66,7 @@ const Footer = () => {
               <Linkedin size={22} />
             </a>
             <a
-              href="https://instagram.com/mochadate"
+              href="https://instagram.com/Petal&Promise"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-smooth"
@@ -80,7 +80,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-border mt-12 pt-6 text-center">
           <p className="font-body text-xs md:text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Mocha Date. All rights reserved.
+            © {new Date().getFullYear()} Petal & Promise. All rights reserved.
           </p>
         </div>
       </div>

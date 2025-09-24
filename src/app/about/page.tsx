@@ -79,7 +79,7 @@ export default function About() {
             Our Story
           </h1>
           <p className="font-body text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-white/90 animate-fadeInUp [animation-delay:200ms]">
-            At <strong>Mocha Date</strong>, we believe love is a craft —
+            At <strong>Petal & Promise</strong>, we believe love is a craft —
             blending timeless matchmaking wisdom with modern relationship
             psychology.
           </p>

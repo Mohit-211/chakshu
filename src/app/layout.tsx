@@ -5,24 +5,24 @@ import "./globals.css";
 
 // ✅ Global branding metadata
 export const metadata: Metadata = {
-  title: "Mocha Date – Curated Matchmaking & Relationship Counseling",
+  title: "Petal & Promise – Curated Matchmaking & Relationship Counseling",
   description:
     "Boutique matchmaking agency helping professionals build meaningful, lasting relationships. Because love deserves more than an algorithm.",
   icons: {
     icon: "/favicon.png",
   },
   openGraph: {
-    title: "Mocha Date – Curated Matchmaking",
+    title: "Petal & Promise – Curated Matchmaking",
     description:
       "Curated introductions, personalized counseling, and lasting connections.",
-    url: "https://mochadate.com",
-    siteName: "Mocha Date",
+    url: "https://Petal&Promise.com",
+    siteName: "Petal & Promise",
     images: [
       {
         url: "/hero-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Mocha Date Hero",
+        alt: "Petal & Promise Hero",
       },
     ],
     locale: "en_US",
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mocha Date – Boutique Matchmaking",
+    title: "Petal & Promise – Boutique Matchmaking",
     description: "Because love deserves more than an algorithm.",
     images: ["/hero-image.jpg"],
-    creator: "@mochadate", // optional if you create a Twitter/X account
+    creator: "@Petal&Promise", // optional if you create a Twitter/X account
   },
 };
 
