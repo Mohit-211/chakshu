@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Petal & Promise – Curated Matchmaking & Relationship Counseling",
   description:
     "Boutique matchmaking agency helping professionals build meaningful, lasting relationships. Because love deserves more than an algorithm.",
+  metadataBase: new URL("https://petalandpromise.in"),
   icons: {
     icon: "/favicon.png",
   },
