@@ -134,29 +134,38 @@ export default function About() {
             </p>
           </div>
 
-          <div className="relative border-l-2 border-accent/30 pl-10 space-y-16">
-            {values.map((value, i) => (
-              <div
-                key={i}
-                className="relative group animate-fadeInUp"
-                style={{ animationDelay: `${i * 150}ms` }}
-              >
-                {/* Circle icon */}
-                <div className="absolute -left-[34px] top-0 flex items-center justify-center w-10 h-10 rounded-full bg-accent text-white shadow-elegant animate-pulse-slow">
-                  <value.icon className="h-5 w-5" />
-                </div>
+          {/* TIMELINE WRAPPER: holds the vertical line and the items */}
+          <div className="relative pl-10">
+            {/* vertical line — positioned once for the whole list */}
+            <div className="absolute left-5 top-0 bottom-0 w-px bg-accent/30" />
 
-                {/* Content */}
-                <div className="bg-card/80 backdrop-blur-sm p-6 rounded-2xl shadow-soft group-hover:shadow-luxury transition-all">
-                  <h3 className="font-heading text-xl font-semibold mb-3">
-                    {value.title}
-                  </h3>
-                  <p className="font-body text-muted-foreground leading-relaxed text-sm">
-                    {value.description}
-                  </p>
+            {/* items list */}
+            <div className="space-y-16">
+              {values.map((value, i) => (
+                <div
+                  key={i}
+                  className="grid grid-cols-[40px_1fr] gap-6 items-start animate-fadeInUp"
+                  style={{ animationDelay: `${i * 150}ms` }}
+                >
+                  {/* ICON COLUMN (fixed width) */}
+                  <div className="flex items-start justify-center">
+                    <div className="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center shadow-elegant">
+                      <value.icon className="h-5 w-5" />
+                    </div>
+                  </div>
+
+                  {/* CONTENT COLUMN */}
+                  <div className="bg-card/80 backdrop-blur-sm p-6 rounded-2xl shadow-soft hover:shadow-luxury transition-all">
+                    <h3 className="font-heading text-xl font-semibold mb-3">
+                      {value.title}
+                    </h3>
+                    <p className="font-body text-muted-foreground leading-relaxed text-sm">
+                      {value.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>

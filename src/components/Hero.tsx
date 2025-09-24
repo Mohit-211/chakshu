@@ -49,7 +49,7 @@ const Hero = () => {
               aria-label="Apply Now"
             >
               <a
-                href="https://forms.google.com/your-form-link"
+                href="https://apply.petalandpromise.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"

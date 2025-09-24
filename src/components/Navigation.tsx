@@ -64,7 +64,7 @@ const Navigation = () => {
             </Link>
             <Button variant="luxury" asChild>
               <a
-                href="https://forms.google.com/your-form-link"
+                href="https://apply.petalandpromise.in"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -124,7 +124,7 @@ const Navigation = () => {
               </Link>
               <Button variant="luxury" className="w-fit" asChild>
                 <a
-                  href="https://forms.google.com/your-form-link"
+                  href="https://apply.petalandpromise.in"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
