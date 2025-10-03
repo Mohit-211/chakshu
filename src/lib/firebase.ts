@@ -11,14 +11,3 @@ const firebaseConfig = {
 };
 
 export const app = initializeApp(firebaseConfig);
-/*
-
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: "",
-  measurementId: "G-7T6GRLZRZV"
-
-*/
