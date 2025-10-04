@@ -31,7 +31,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 relative">
             <Link
               href="/"
               className={`font-body font-medium transition-smooth ${
@@ -42,16 +42,38 @@ const Navigation = () => {
             >
               Home
             </Link>
-            <Link
-              href="/about"
-              className={`font-body font-medium transition-smooth ${
-                isActive("/about")
-                  ? "text-primary"
-                  : "text-foreground hover:text-primary"
-              }`}
-            >
-              About Us
-            </Link>
+
+            {/* About Us with hover dropdown */}
+            <div className="relative group">
+              <Link
+                href="/about"
+                className={`font-body font-medium transition-smooth ${
+                  isActive("/about") ||
+                  pathname.startsWith("/blogs") ||
+                  pathname.startsWith("/faqs")
+                    ? "text-primary"
+                    : "text-foreground hover:text-primary"
+                }`}
+              >
+                About Us
+              </Link>
+              {/* Dropdown */}
+              <div className="absolute top-full left-0 mt-2 w-40 bg-white border rounded-lg shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-1 transform transition-all duration-200 z-50">
+                <Link
+                  href="/blogs"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Blogs
+                </Link>
+                <Link
+                  href="/faqs"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  FAQs
+                </Link>
+              </div>
+            </div>
+
             <Link
               href="/contact"
               className={`font-body font-medium transition-smooth ${
@@ -62,6 +84,7 @@ const Navigation = () => {
             >
               Contact
             </Link>
+
             <Button variant="luxury" asChild>
               <a
                 href="https://apply.petalandpromise.in"
@@ -100,17 +123,38 @@ const Navigation = () => {
               >
                 Home
               </Link>
-              <Link
-                href="/about"
-                onClick={toggleMenu}
-                className={`font-body font-medium transition-smooth ${
-                  isActive("/about")
-                    ? "text-primary"
-                    : "text-foreground hover:text-primary"
-                }`}
-              >
-                About Us
-              </Link>
+
+              {/* About Us + nested mobile menu */}
+              <div className="flex flex-col">
+                <Link
+                  href="/about"
+                  onClick={toggleMenu}
+                  className={`font-body font-medium transition-smooth ${
+                    isActive("/about")
+                      ? "text-primary"
+                      : "text-foreground hover:text-primary"
+                  }`}
+                >
+                  About Us
+                </Link>
+                <div className="ml-4 flex flex-col space-y-2">
+                  <Link
+                    href="/blogs"
+                    onClick={toggleMenu}
+                    className="text-sm text-foreground hover:text-primary"
+                  >
+                    Blogs
+                  </Link>
+                  <Link
+                    href="/faqs"
+                    onClick={toggleMenu}
+                    className="text-sm text-foreground hover:text-primary"
+                  >
+                    FAQs
+                  </Link>
+                </div>
+              </div>
+
               <Link
                 href="/contact"
                 onClick={toggleMenu}

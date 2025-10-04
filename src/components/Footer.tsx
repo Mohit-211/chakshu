@@ -1,86 +1,83 @@
 "use client";
 
 import Image from "next/image";
-import { Heart, Linkedin, Instagram } from "lucide-react";
+import Link from "next/link";
+import { Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
+  const links = [
+    { href: "/about", label: "About" },
+    { href: "/blogs", label: "Blogs" },
+    { href: "/faqs", label: "FAQs" },
+    { href: "/contact", label: "Contact" },
+    { href: "/privacy-policy", label: "Privacy" },
+    { href: "/terms", label: "Terms" },
+  ];
+
   return (
-    <footer className="relative bg-gradient-to-b from-muted/30 to-background border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+    <footer className="bg-[#F9F6EF] border-t border-[#E5E0D8]">
+      <div className="max-w-7xl mx-auto px-6 py-10">
+        {/* Grid Layout */}
+        <div className="grid gap-10 md:grid-cols-3 md:items-center">
           {/* Logo + Tagline */}
-          <div className="flex flex-col items-center md:items-start space-y-5">
-            <div className="flex items-center space-x-3">
-              <Image
-                src="/logo.png"
-                alt="Petal & Promise"
-                width={180}
-                height={80}
-                className="h-auto w-24"
-                priority
-              />
-              <Heart className="h-6 w-6 text-accent" />
-            </div>
-            <p className="font-body text-base text-muted-foreground text-center md:text-left max-w-sm leading-relaxed">
+          <div className="flex flex-col items-center md:items-start space-y-4">
+            <Image
+              src="/logo.png"
+              alt="Petal & Promise"
+              width={160}
+              height={70}
+              className="h-auto w-auto"
+            />
+            <p className="text-sm text-gray-600 text-center md:text-left max-w-xs leading-relaxed">
               Crafting meaningful connections with care, privacy, and intention.
             </p>
           </div>
 
-          {/* Navigation Links */}
-          <div className="flex justify-center md:justify-center space-x-10">
-            <a
-              href="/about"
-              className="font-body text-sm md:text-base text-muted-foreground hover:text-primary transition-smooth"
-            >
-              About
-            </a>
-            <a
-              href="/contact"
-              className="font-body text-sm md:text-base text-muted-foreground hover:text-primary transition-smooth"
-            >
-              Contact
-            </a>
-            <a
-              href="/privacy-policy"
-              className="font-body text-sm md:text-base text-muted-foreground hover:text-primary transition-smooth"
-            >
-              Privacy
-            </a>
-            <a
-              href="/terms"
-              className="font-body text-sm md:text-base text-muted-foreground hover:text-primary transition-smooth"
-            >
-              Terms
-            </a>
-          </div>
+          {/* Navigation */}
+          <nav className="flex flex-wrap justify-center gap-x-6 gap-y-3">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm text-gray-600 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 rounded transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
 
-          {/* Social Icons */}
+          {/* Socials */}
           <div className="flex justify-center md:justify-end space-x-6">
             <a
-              href="https://linkedin.com/company/Petal&Promise"
+              href="https://linkedin.com/company/petalandpromise"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-smooth"
               aria-label="LinkedIn"
+              className="text-gray-500 hover:text-gray-900 transition-transform transform hover:scale-110 focus-visible:ring-2 focus-visible:ring-gray-400 rounded"
             >
-              <Linkedin size={22} />
+              <Linkedin size={20} />
             </a>
             <a
-              href="https://instagram.com/Petal&Promise"
+              href="https://instagram.com/petalandpromise"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-smooth"
               aria-label="Instagram"
+              className="text-gray-500 hover:text-gray-900 transition-transform transform hover:scale-110 focus-visible:ring-2 focus-visible:ring-gray-400 rounded"
             >
-              <Instagram size={22} />
+              <Instagram size={20} />
             </a>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="border-t border-border mt-12 pt-6 text-center">
-          <p className="font-body text-xs md:text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Petal & Promise. All rights reserved.
+        {/* Divider + Copyright */}
+        <div className="border-t border-[#E5E0D8] mt-10 pt-6 text-center space-y-2">
+          <p className="text-xs text-gray-500">
+            © {year} Petal & Promise. All rights reserved.
+          </p>
+          <p className="text-xs text-gray-400">
+            Made with ❤️ for meaningful connections.
           </p>
         </div>
       </div>

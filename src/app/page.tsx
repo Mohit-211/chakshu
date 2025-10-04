@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import ServicesOverview from "@/components/ServicesOverview";
 import WhyChooseUs from "@/components/WhyChooseUs";
-import Footer from "@/components/Footer";
+import Blogs from "@/components/Blogs";
 
 const Home = () => {
   return (
@@ -10,6 +10,7 @@ const Home = () => {
       <Hero />
       <ServicesOverview />
       <WhyChooseUs />
+      <Blogs />
     </div>
   );
 };
